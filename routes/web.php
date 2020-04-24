@@ -18,6 +18,7 @@ Route::get('/','ContactsController@index');
 Auth::routes();
 
 Route::get('/contact', 		 		'ContactsController@create'); //show contact view
+Route::get("my-search", "HomeController@mysearch");
 Route::post('/contact',				'ContactsController@store'); //add contact to db
 Route::get('/edit/contact/{id}', 	'ContactsController@edit');   //show edit view
 Route::get('/delete/contact/{id}', 	'ContactsController@delete'); //delete contact from db

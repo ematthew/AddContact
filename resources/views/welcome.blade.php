@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 {{-- to add the navbar --}}
 
@@ -12,6 +13,17 @@
             <a href="/contact" class="btn btn-primary mb-3">
                 Create Contact
             </a>
+            <form method="Get" action="{{url('my-search')}}">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <input type="text" name="search" class="form-control" placeholder="search" value="{{old('search')}}">
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-success"> Search</button>
+                    </div>
+                </div>
+            </form>
+
             <table class="table table-striped">
                 <thead>
                     <tr>
